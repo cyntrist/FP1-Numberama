@@ -46,3 +46,11 @@ U:\hlocal\FP P2 Numberama v1.4\Numberama\Numberama\obj\Debug\Numberama.csproj.Su
 U:\hlocal\FP P2 Numberama v1.4\Numberama\Numberama\obj\Debug\Numberama.csproj.CoreCompileInputs.cache
 U:\hlocal\FP P2 Numberama v1.4\Numberama\Numberama\obj\Debug\Numberama.exe
 U:\hlocal\FP P2 Numberama v1.4\Numberama\Numberama\obj\Debug\Numberama.pdb
+E:\Programas\OneDrive - Universidad Complutense de Madrid (UCM)\UCM\fp\p2\Numberama\bin\Debug\Numberama.exe.config
+E:\Programas\OneDrive - Universidad Complutense de Madrid (UCM)\UCM\fp\p2\Numberama\bin\Debug\Numberama.exe
+E:\Programas\OneDrive - Universidad Complutense de Madrid (UCM)\UCM\fp\p2\Numberama\bin\Debug\Numberama.pdb
+E:\Programas\OneDrive - Universidad Complutense de Madrid (UCM)\UCM\fp\p2\Numberama\obj\Debug\Numberama.csproj.AssemblyReference.cache
+E:\Programas\OneDrive - Universidad Complutense de Madrid (UCM)\UCM\fp\p2\Numberama\obj\Debug\Numberama.csproj.SuggestedBindingRedirects.cache
+E:\Programas\OneDrive - Universidad Complutense de Madrid (UCM)\UCM\fp\p2\Numberama\obj\Debug\Numberama.csproj.CoreCompileInputs.cache
+E:\Programas\OneDrive - Universidad Complutense de Madrid (UCM)\UCM\fp\p2\Numberama\obj\Debug\Numberama.exe
+E:\Programas\OneDrive - Universidad Complutense de Madrid (UCM)\UCM\fp\p2\Numberama\obj\Debug\Numberama.pdb

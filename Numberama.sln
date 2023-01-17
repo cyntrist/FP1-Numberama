@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.3.32922.545
+VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numberama", "Numberama\Numberama.csproj", "{E0C25394-C4BA-4E14-BA4C-1DDEFE47CF98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numberama", "Numberama.csproj", "{E0C25394-C4BA-4E14-BA4C-1DDEFE47CF98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BB8A62C8-7022-4CFB-8B9F-8D942906B2A0}
+		SolutionGuid = {E2121D6D-24DE-48F3-9B36-702C6875E722}
 	EndGlobalSection
 EndGlobal

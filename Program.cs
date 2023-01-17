@@ -12,7 +12,8 @@ namespace Numberama
         const int MAX_NUM = 400, // número máximo de eltos en la secuencia    
                   MODO = 1, // modo de juego (cant)
                   ANCHO = 9; // cantidad de columnas / anchura de filas
-        const bool DEBUG = true;
+        const bool DEBUG = false;
+        const string FICHERO = @"datos.txt";
 
         // Método Main
         static void Main(string[] args)
@@ -25,9 +26,10 @@ namespace Numberama
 
             Console.CursorVisible = false;
 
-            Console.WriteLine("Pulsa X para recuperar la partida.\nPulsa cualquier otro botón para continuar.");
+            Console.WriteLine("Pulsa X para recuperar la partida.\n" +
+                              "Pulsa cualquier otro botón para continuar.");
             string dir = Console.ReadKey(true).Key.ToString();
-            if (dir == "X" && File.Exists(@"datos.txt"))
+            if (dir == "X" && File.Exists(FICHERO))
                 Lee(ref nums, ref cont);
             else
                 while (cont < 30)
@@ -141,19 +143,19 @@ namespace Numberama
                 case 'l':
                     if (act > 0) 
                         act--;
-                    return;
+                    break;
                 case 'r':
                     if (act < (cont - 1)) 
                         act++;
-                    return;
+                    break;
                 case 'u':
                     if (act >= ANCHO) 
                         act -= ANCHO;
-                    return;
+                    break;
                 case 'd':
                     if (act < (cont - ANCHO)) 
                         act += ANCHO;
-                    return;
+                    break;
                 case 'x':
                     if (nums[act] != 0) // tal cual el enunciado pag. 4 
                     {
@@ -170,19 +172,17 @@ namespace Numberama
                         else 
                             sel = act;
                     }
-                    return;
+                    break;
                 case 'g':
                     Genera(nums, ref cont, MODO); 
-                    return;
+                    break;
                 case 'q':
                     Guarda(nums, cont);
                     for(int i = 0; i < cont; i++)
-                    {
                         nums[i] = 0;
-                    }
-                    return;
+                    break;
                 default:
-                    return;
+                    break;
             }
         }
 
@@ -193,8 +193,6 @@ namespace Numberama
 
             if (menor == mayor) // no puede ser la misma casilla
                 return false;
-            if (mayor == menor + 1 || mayor == menor + ANCHO) // inmediatamente adyacente horizontal o vertical
-                return true;
 
             int i = menor + 1; // búsqueda contiguos con 0s horizontales
             while ((i + 1) < cont && nums[i] == 0) // mientras los siguientes sean 0 y no se salgan de rango
@@ -222,31 +220,27 @@ namespace Numberama
         static bool Terminado(int[] nums, int cont) // true si todo nums[i] es igual a 0
         {
             int i = 0; // parecido a contiguos horizontales
-            while (i < cont)
-            {
-                if (nums[i] == 0)
+            while (i < cont && nums[i] == 0)
                     i++;
-                else
-                    return false;
-            }
-            return true;
+            if (i >= cont)
+                return true;
+            else
+                return false;
         }
 
         static void Guarda(int[] nums, int cont)
         {
-             StreamWriter sw = new StreamWriter(@"datos.txt");
+             StreamWriter sw = new StreamWriter(FICHERO);
              for(int i = 0; i < cont; i++)
-             {
                  sw.WriteLine(nums[i]);
-             }
              sw.Close();
         }
 
         static void Lee(ref int[] nums, ref int cont)
         {
-            StreamReader sr = new StreamReader(@"datos.txt");
+            StreamReader sr = new StreamReader(FICHERO);
             cont = 0;
-            foreach (string line in System.IO.File.ReadLines(@"datos.txt"))
+            foreach (string line in File.ReadLines(FICHERO))
             {
                 nums[cont] = int.Parse(line);
                 cont++;
@@ -261,7 +255,7 @@ namespace Numberama
             int linea = pos - (pos % ANCHO),
                 i = linea;
 
-            while (nums[i] == 0 && i < Math.Min(linea + ANCHO, Math.Min(cont, (MAX_NUM - 1)))) // Revisar  Genera()
+            while (nums[i] == 0 && i < Math.Min(linea + ANCHO, Math.Min(cont, (MAX_NUM - 1)))) 
                 i++;
 
             if (i == linea + ANCHO || i == cont || i == MAX_NUM -1)
