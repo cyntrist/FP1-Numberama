@@ -258,7 +258,7 @@ namespace Numberama
             while (nums[i] == 0 && i < Math.Min(linea + ANCHO, Math.Min(cont, (MAX_NUM - 1)))) 
                 i++;
 
-            if (i == linea + ANCHO || i == cont || i == MAX_NUM -1)
+            if (i == linea + ANCHO || i == cont || i == MAX_NUM -   1)
             {
                 for (int j = linea; j < cont - ANCHO; j++)
                     nums[j] = nums[j + ANCHO];
